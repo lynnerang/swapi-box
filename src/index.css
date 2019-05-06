@@ -1,8 +1,8 @@
-@import './App.scss';
-@import './CrawlScreen.scss';
-@import './ExploreScreen.scss';
-@import './DataScreen.scss';
-@import './Card.scss';
+@import './Components/App/App.scss';
+@import './Components/CrawlScreen/CrawlScreen.scss';
+@import './Components/ExploreScreen/ExploreScreen.scss';
+@import './Components/DataScreen/DataScreen.scss';
+@import './Components/Card/Card.scss';
 
 body {
   margin: 0;
