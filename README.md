@@ -1,68 +1,88 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of contents
+* [Intro](#Swapi-Box-App)
+* [Screenshots](#Screenshots)
+* [Getting Started](#Getting-Started)
+* [How to Play](#How-to-Play)
+* [Project Emphasis](#Project-Emphasis)
+* [License](#License)
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Swapi Box App
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This project is a Turing front-end evelopment project focused on working with React and Enzyme/Jest.
 
-### `npm test`
+This is an app for people who would like to browse through Star Wars data and keep track of their favorite people/planets/vehicles.  It pulls certain details for each category of data from the Swapi API.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Screenshots
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Home page](/src/screenshots/1.png)
+![Explore page](/src/screenshots/2.png)
+![People page](/src/screenshots/3.png)
+![Favorites page](/src/screenshots/4.png)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### View Live on GitHub
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You can view the game live on my GitHub at the following link:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<a href="https://lynnerang.github.io/swapi-box/">Swapi-Box - Live!</a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Get Your Own Copy
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you'd like to clone this repository to your own local machine, run the following command in your terminal:
 
-## Learn More
+```shell
+git clone https://github.com/lynnerang/swapi-box.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Then run the following command to install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```shell
+npm install
+```
 
-### Code Splitting
+To view the app in action, run the following command in your terminal:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+Then, go to `http://localhost:3000/` in your browser to see the code running in the browser.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+---
 
-### Making a Progressive Web App
+## How to Play
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+1. On the home page, you can see the star wars crawl with random movie information.
+2. You can skip the crawl by clicking the skip button or the Explore or Favorite links.
+3. You can view details of star wars people, planets, or vehicles from the explore page and move between them from each page.
+4. You can click the star icon to add favorites, and view those favorites using the Favorites link.
+5. You can replay the random movie crawl anytime by clicking Play Crawl.
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Project Emphasis
 
-### Deployment
+View the project specification on the <a href="http://frontend.turing.io/projects/swapi-box.html">Turing webpage for this project</a>.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- [x] HTML & CSS 
+- [x] Flex-box
+- [x] Grid CSS
+- [x] Wireframing
+- [x] UI design
+- [x] React
+- [x] React router
+- [x] Es6 classes
+- [x] API fetches
+- [x] Enzyme & Jest testing
+- [x] Webpack
+- [x] NPM
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Licensing
+
+All credit goes to <a href="turing.io">Turing School of Software</a> for providing the project specifications.
