@@ -48,21 +48,18 @@ class Card extends Component {
   }
 
   toggleFavorite = () => {
-    console.log(this.state.isFavorite)
     const cardData = this.props.data;
     const favs = JSON.parse(localStorage.getItem('favorites')) || [];
     
     !this.state.isFavorite ? favs.push(cardData)
     : favs.splice(favs.indexOf(favs.find(i => i.name === cardData.name)), 1);
-    console.log(favs)
+  
     localStorage.setItem('favorites', JSON.stringify(favs));
     this.props.refreshFavCount();
     this.setState({isFavorite: !this.state.isFavorite});
-    console.log(this.state.isFavorite)
   }
 
   render() {
-    console.log(JSON.parse(localStorage.getItem('favorites')))
     const details = this.getDetails();
     const popUp = this.state.showPopup ? this.getPopup() : null;
     const favIcon = this.state.isFavorite ? <i className='fas fa-star'></i> : <i className='far fa-star'></i>;
