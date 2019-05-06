@@ -121,7 +121,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.vehicleData)
     const favs = JSON.parse(localStorage.getItem('favorites')) || [];
    
     if (this.state.loading) {

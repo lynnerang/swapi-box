@@ -3,7 +3,7 @@ import CrawlScreen from './CrawlScreen';
 import Enzyme from 'enzyme';
 import { NavLink } from 'react-router-dom';
 import { shallow } from 'enzyme';
-import { mockFilm } from './mockData.js';
+import { mockFilm } from '../../mockData.js';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() })
 

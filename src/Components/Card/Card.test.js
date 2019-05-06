@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import Enzyme from 'enzyme';
 import { shallow } from 'enzyme';
-import { mockPerson } from './mockData.js';
+import { mockPerson } from '../../mockData.js';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() })
 

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App.js';
 import Enzyme from 'enzyme';
 import { shallow } from 'enzyme';
-import { mockFilm, mockFilms, mockPlanets } from '../mockData.js';
+import { mockFilm, mockFilms, mockPlanets } from '../../mockData.js';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() })
 
