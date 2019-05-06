@@ -1,0 +1,55 @@
+
+.data-nav {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  padding-top: 20px;
+}
+
+.category-img-small {
+  width: 25px;
+  height: 25px;
+}
+
+.category-text-small {
+  margin: 0px;
+  margin-left: 15px;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+}
+
+.category-option {
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  opacity: .6;
+  margin-right: 40px;
+  padding: 8px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 5px 10px 12px #000;
+
+    .category-img-small,
+    .category-text-small {
+      opacity: 1; 
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+}
+
+.card-area {
+  margin-top: 100px;
+  padding: 0px 0px 100px 0px;
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
