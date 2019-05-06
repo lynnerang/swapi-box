@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import './App.scss';
-import CrawlScreen from './CrawlScreen';
-import ExploreScreen from './ExploreScreen';
-import DataScreen from './DataScreen';
+import CrawlScreen from '../CrawlScreen/CrawlScreen.js';
+import ExploreScreen from '../ExploreScreen/ExploreScreen.js';
+import DataScreen from '../DataScreen/DataScreen.js';
 import { Switch, Route, NavLink } from 'react-router-dom';
-import { fetchFilms, fetchPeople, fetchPlanets, fetchResident } from './api.js';
+import { fetchFilms, fetchPeople, fetchPlanets, fetchResident } from '../../api.js';
 
 class App extends Component {
   constructor(props) {
@@ -131,7 +131,7 @@ class App extends Component {
         <div className='App'>
           <header className=''>
             <div className='header-left'>
-              <img className='logo' src={require('./images/swapilogo.png')} alt='Swapi-Box logo' />
+              <img className='logo' src={require('../../images/swapilogo.png')} alt='Swapi-Box logo' />
               <div className='header-text'>
                 <h1>SWAPI-Box</h1>
                 <p className='subtitle'>For all your StarWars info needs!</p>
