@@ -61,6 +61,28 @@ class App extends Component {
     return Promise.all(promises);
   }
 
+  getVehicleData = () => {
+    if (!this.state.vehicleData.length) {
+      fetch('https://swapi.co/api/vehicles')
+        .then(response => response.json())
+        .then(result => this.getVehicleDetails(result.results))
+        .then(vehicleData => this.setState({vehicleData}))
+        .catch(err => console.log(err))
+    }
+  }
+
+  getVehicleDetails = data => {
+    const promises = data.map(vehicle => {
+      return ({ 
+        name: vehicle.name,
+        model: vehicle.model,
+        class: vehicle.vehicle_class,
+        passengers: vehicle.passengers
+      })
+    })
+    return Promise.all(promises);
+  }
+
   getPeopleData = () => {
     if (!this.state.peopleData.length) {
       fetchPeople()
@@ -99,6 +121,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.vehicleData)
     const favs = JSON.parse(localStorage.getItem('favorites')) || [];
    
     if (this.state.loading) {
@@ -133,23 +156,35 @@ class App extends Component {
               />
               <Route path='/explore' render={(props) => (<ExploreScreen 
                 getPeopleData={this.getPeopleData} 
-                getPlanetData={this.getPlanetData}/>)}
+                getPlanetData={this.getPlanetData}
+                getVehicleData={this.getVehicleData}
+              />)}
               />
               <Route path='/people' render={(props) => (<DataScreen     
                 getPeopleData={this.getPeopleData} 
                 getPlanetData={this.getPlanetData} 
+                getVehicleData={this.getVehicleData}
                 refreshFavCount={this.refreshFavCount}
                 data={this.state.peopleData}/>)}
               />
               <Route path='/planets' render={(props) => (<DataScreen 
                 getPeopleData={this.getPeopleData}
                 getPlanetData={this.getPlanetData} 
+                getVehicleData={this.getVehicleData}
                 refreshFavCount={this.refreshFavCount}
                 data={this.state.planetData}/>)}
+              />
+              <Route path='/vehicles' render={(props) => (<DataScreen 
+                getPeopleData={this.getPeopleData}
+                getPlanetData={this.getPlanetData} 
+                getVehicleData={this.getVehicleData}
+                refreshFavCount={this.refreshFavCount}
+                data={this.state.vehicleData}/>)}
               />
               <Route path='/favorites' render={(props) => (<DataScreen 
                 getPeopleData={this.getPeopleData}
                 getPlanetData={this.getPlanetData} 
+                getVehicleData={this.getVehicleData}
                 refreshFavCount={this.refreshFavCount}
                 data={favs}/>)}
               />
