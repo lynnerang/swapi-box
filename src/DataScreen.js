@@ -18,7 +18,7 @@ function DataScreen(props) {
           <img className='category-img-small' src={require('./images/planeticon.png')} aria-hidden='true'/>
           <p className='category-text-small'>Planets</p>
         </NavLink>
-        <NavLink className='category-option' to='/vehicles'>
+        <NavLink className='category-option' to='/vehicles' onClick={props.getVehicleData}>
           <img className='category-img-small' src={require('./images/vehiclesicon.png')} aria-hidden='true'/>
           <p className='category-text-small'>Vehicles</p>
         </NavLink>

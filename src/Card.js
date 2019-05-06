@@ -64,13 +64,15 @@ class Card extends Component {
     const popUp = this.state.showPopup ? this.getPopup() : null;
     const favIcon = this.state.isFavorite ? <i className='fas fa-star'></i> : <i className='far fa-star'></i>;
 
+    const imgSrc = this.props.data.name === 'TIE/LN starfighter' ? require(`./images/TIE-LN.png`) : require(`./images/${this.props.data.name}.png`)
+
     return (
       <>
       {popUp}
         <article className='card'>
         <button type='button' className='favorite-btn' onClick={this.toggleFavorite}>{favIcon}</button>
           <div className='card-header'>
-            <img className='card-img' src={require(`./images/${this.props.data.name}.png`)} alt='person profile pic' />
+            <img className='card-img' src={imgSrc} alt='person profile pic' />
             <h3 className='card-header'>{this.props.data.name}</h3>
           </div>
           <div className='card-body'>
