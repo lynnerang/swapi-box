@@ -15,7 +15,7 @@ function ExploreScreen(props) {
           <img className='category-img' src={require('../../images/planeticon.png')}aria-hidden='true' alt='planet icon' />
           <p className='category-text'>Planets</p>
         </NavLink>
-        <NavLink className='category-card' to='/vehicles'>
+        <NavLink className='category-card' to='/vehicles' onClick={props.getVehicleData}>
           <img className='category-img' src={require('../../images/vehiclesicon.png')} aria-hidden='true' alt='millenium falcon icon'/>
           <p className='category-text'>Vehicles</p>
         </NavLink>
